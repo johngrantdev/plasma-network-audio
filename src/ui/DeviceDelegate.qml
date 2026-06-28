@@ -20,9 +20,15 @@ QQC2.ItemDelegate {
 
     readonly property string deviceIcon: {
         switch (deviceType) {
-        case "Apple TV": return "video-television"
+        case "Apple TV":      return "video-television"
+        case "Samsung TV":
+        case "LG TV":
+        case "Sony TV":       return "video-television"
         case "AirPort Express": return "network-wireless"
-        default: return "audio-speakers"
+        case "Denon":
+        case "Marantz":       return "audio-card"
+        case "Shairport-sync": return "multimedia-player"
+        default:              return "audio-speakers"
         }
     }
 
