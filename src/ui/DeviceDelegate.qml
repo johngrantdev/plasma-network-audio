@@ -13,9 +13,18 @@ QQC2.ItemDelegate {
     required property int    status        // NetworkAudioDevice::Status as int
     required property bool   autoConnect
     required property bool   hasPreference
+    required property string deviceType
 
     readonly property bool isAvailable: status === 0
     readonly property bool isIgnored:   status === 2
+
+    readonly property string deviceIcon: {
+        switch (deviceType) {
+        case "Apple TV": return "video-television"
+        case "AirPort Express": return "network-wireless"
+        default: return "audio-speakers"
+        }
+    }
 
     signal connectRequested
     signal disconnectRequested
@@ -26,7 +35,7 @@ QQC2.ItemDelegate {
         spacing: Kirigami.Units.smallSpacing
 
         Kirigami.Icon {
-            source: "audio-speakers"
+            source: root.deviceIcon
             opacity: root.isAvailable ? 1.0 : 0.5
             Layout.preferredWidth:  Kirigami.Units.iconSizes.medium
             Layout.preferredHeight: Kirigami.Units.iconSizes.medium
@@ -44,8 +53,14 @@ QQC2.ItemDelegate {
             }
 
             QQC2.Label {
-                visible: root.isAvailable && root.host.length > 0
-                text: root.host
+                visible: root.deviceType.length > 0 || (root.isAvailable && root.host.length > 0)
+                text: {
+                    if (root.deviceType.length > 0 && root.isAvailable && root.host.length > 0)
+                        return root.deviceType + "  ·  " + root.host
+                    if (root.deviceType.length > 0)
+                        return root.deviceType
+                    return root.host
+                }
                 Layout.fillWidth: true
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont

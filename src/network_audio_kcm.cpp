@@ -148,6 +148,7 @@ NetworkAudioDevice NetworkAudioKCM::deviceFromMap(const QVariantMap &map)
                             map.value(QStringLiteral("status")).toInt());
     dev.autoConnect   = map.value(QStringLiteral("autoConnect")).toBool();
     dev.hasPreference = map.value(QStringLiteral("hasPreference")).toBool();
+    dev.deviceType    = map.value(QStringLiteral("deviceType")).toString();
     return dev;
 }
 

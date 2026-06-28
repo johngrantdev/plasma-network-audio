@@ -24,6 +24,7 @@ DevicePreference PreferenceStore::entry(const QString &id) const
     DevicePreference p;
     p.id          = id;
     p.name        = grp.readEntry("name", QString());
+    p.deviceType  = grp.readEntry("deviceType", QString());
     p.autoConnect = grp.readEntry("autoConnect", false);
     p.ignored     = grp.readEntry("ignored", false);
     return p;
@@ -37,11 +38,13 @@ QList<DevicePreference> PreferenceStore::allEntries() const
     return result;
 }
 
-void PreferenceStore::save(const QString &id, const QString &name, bool autoConnect, bool ignored)
+void PreferenceStore::save(const QString &id, const QString &name, const QString &deviceType,
+                           bool autoConnect, bool ignored)
 {
     KConfigGroup top = devicesGroup();
     KConfigGroup grp = top.group(id);
     grp.writeEntry("name",        name);
+    grp.writeEntry("deviceType",  deviceType);
     grp.writeEntry("autoConnect", autoConnect);
     grp.writeEntry("ignored",     ignored);
     m_config->sync();

@@ -16,6 +16,7 @@ struct NetworkAudioDevice {
     QString codec;           // raop.audio.codec, e.g. "PCM"
     QString encryptionType;  // raop.encryption.type, e.g. "auth_setup"
     QString transport;       // raop.transport, e.g. "udp"
+    QString deviceType;      // human-readable type, e.g. "Sonos", "Apple TV"
     bool connected = false;
 
     Status status = Status::Available;

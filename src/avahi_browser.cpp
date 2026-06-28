@@ -163,7 +163,34 @@ void AvahiBrowser::onResolverFound(int interface, int /*protocol*/,
             device.transport = QStringLiteral("tcp");
     }
 
+    device.deviceType = detectDeviceType(txtMap.value(QStringLiteral("am")), host);
+
     Q_EMIT deviceDiscovered(device);
+}
+
+// static
+QString AvahiBrowser::detectDeviceType(const QString &am, const QString &hostname)
+{
+    const QString a = am.toLower();
+    if (a.startsWith(QLatin1String("appletv")))
+        return QStringLiteral("Apple TV");
+    if (a.startsWith(QLatin1String("homepod")) || a.startsWith(QLatin1String("audioaccessory")))
+        return QStringLiteral("HomePod");
+    if (a.startsWith(QLatin1String("airport")))
+        return QStringLiteral("AirPort Express");
+    if (a.contains(QLatin1String("shairport")))
+        return QStringLiteral("Shairport-sync");
+    if (hostname.contains(QLatin1String("sonos"), Qt::CaseInsensitive))
+        return QStringLiteral("Sonos");
+    // Samsung, LG, Sony etc. don't set 'am'; try name-based heuristics
+    const QString h = hostname.toLower();
+    if (h.contains(QLatin1String("samsung"))) return QStringLiteral("Samsung TV");
+    if (h.contains(QLatin1String("lg")))      return QStringLiteral("LG TV");
+    if (h.contains(QLatin1String("sony")))    return QStringLiteral("Sony TV");
+    if (h.contains(QLatin1String("denon")))   return QStringLiteral("Denon");
+    if (h.contains(QLatin1String("marantz"))) return QStringLiteral("Marantz");
+    if (h.contains(QLatin1String("bose")))    return QStringLiteral("Bose");
+    return QStringLiteral("AirPlay");
 }
 
 QString AvahiBrowser::stripMacPrefix(const QString &rawName)

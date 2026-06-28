@@ -17,6 +17,7 @@ public:
         StatusRole,
         AutoConnectRole,
         HasPreferenceRole,
+        DeviceTypeRole,
     };
 
     explicit NetworkAudioModel(QObject *parent = nullptr);

@@ -92,7 +92,7 @@ void NetworkAudioDaemon::setAutoConnect(const QString &id, bool enabled)
     if (i >= 0) {
         m_devices[i].autoConnect   = enabled;
         m_devices[i].hasPreference = true;
-        m_prefs->save(id, m_devices[i].name, enabled,
+        m_prefs->save(id, m_devices[i].name, m_devices[i].deviceType, enabled,
                       m_devices[i].status == NetworkAudioDevice::Status::Ignored);
         Q_EMIT deviceUpdated(deviceToMap(m_devices[i]));
 
@@ -101,7 +101,7 @@ void NetworkAudioDaemon::setAutoConnect(const QString &id, bool enabled)
             m_controller->connectDevice(m_devices[i]);
     } else if (m_prefs->hasEntry(id)) {
         const DevicePreference pref = m_prefs->entry(id);
-        m_prefs->save(id, pref.name, enabled, pref.ignored);
+        m_prefs->save(id, pref.name, pref.deviceType, enabled, pref.ignored);
         Q_EMIT deviceUpdated(deviceToMap(deviceFromPreference(m_prefs->entry(id))));
     }
 }
@@ -109,9 +109,9 @@ void NetworkAudioDaemon::setAutoConnect(const QString &id, bool enabled)
 void NetworkAudioDaemon::ignoreDevice(const QString &id)
 {
     const int i = indexForId(id);
-    const QString name = (i >= 0) ? m_devices.at(i).name
-                                  : m_prefs->entry(id).name;
-    m_prefs->save(id, name, false, true);
+    const QString name       = (i >= 0) ? m_devices.at(i).name       : m_prefs->entry(id).name;
+    const QString deviceType = (i >= 0) ? m_devices.at(i).deviceType : m_prefs->entry(id).deviceType;
+    m_prefs->save(id, name, deviceType, false, true);
 
     if (i >= 0) {
         m_devices[i].status        = NetworkAudioDevice::Status::Ignored;
@@ -149,9 +149,9 @@ void NetworkAudioDaemon::onDeviceDiscovered(const NetworkAudioDevice &rawDev)
         dev.autoConnect = pref.autoConnect;
         dev.status      = pref.ignored ? NetworkAudioDevice::Status::Ignored
                                        : NetworkAudioDevice::Status::Available;
-        // Refresh stored name to the latest display name
+        // Refresh stored name and type to the latest values
         if (!pref.ignored)
-            m_prefs->save(dev.id, dev.name, pref.autoConnect, false);
+            m_prefs->save(dev.id, dev.name, dev.deviceType, pref.autoConnect, false);
     }
 
     const int existing = indexForId(dev.id);
@@ -213,7 +213,7 @@ void NetworkAudioDaemon::showDiscoveryNotification(const NetworkAudioDevice &dev
     connect(connectAction, &KNotificationAction::activated, this, [this, id]() {
         const int i = indexForId(id);
         if (i < 0) return;
-        m_prefs->save(id, m_devices[i].name, true, false);
+        m_prefs->save(id, m_devices[i].name, m_devices[i].deviceType, true, false);
         m_devices[i].autoConnect   = true;
         m_devices[i].hasPreference = true;
         Q_EMIT deviceUpdated(deviceToMap(m_devices[i]));
@@ -240,6 +240,7 @@ QVariantMap NetworkAudioDaemon::deviceToMap(const NetworkAudioDevice &dev) const
         {QStringLiteral("status"),        static_cast<int>(dev.status)},
         {QStringLiteral("autoConnect"),   dev.autoConnect},
         {QStringLiteral("hasPreference"), dev.hasPreference},
+        {QStringLiteral("deviceType"),    dev.deviceType},
     };
 }
 
@@ -248,6 +249,7 @@ NetworkAudioDevice NetworkAudioDaemon::deviceFromPreference(const DevicePreferen
     NetworkAudioDevice dev;
     dev.id            = pref.id;
     dev.name          = pref.name;
+    dev.deviceType    = pref.deviceType;
     dev.autoConnect   = pref.autoConnect;
     dev.hasPreference = true;
     dev.status        = pref.ignored ? NetworkAudioDevice::Status::Ignored

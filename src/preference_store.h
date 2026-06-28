@@ -8,6 +8,7 @@
 struct DevicePreference {
     QString id;
     QString name;
+    QString deviceType;
     bool autoConnect = false;
     bool ignored = false;
 };
@@ -22,7 +23,7 @@ public:
     DevicePreference entry(const QString &id) const;
     QList<DevicePreference> allEntries() const;
 
-    void save(const QString &id, const QString &name, bool autoConnect, bool ignored);
+    void save(const QString &id, const QString &name, const QString &deviceType, bool autoConnect, bool ignored);
     void forget(const QString &id);
 
 private:

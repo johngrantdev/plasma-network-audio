@@ -25,6 +25,7 @@ QVariant NetworkAudioModel::data(const QModelIndex &index, int role) const
     case StatusRole:        return static_cast<int>(dev.status);
     case AutoConnectRole:   return dev.autoConnect;
     case HasPreferenceRole: return dev.hasPreference;
+    case DeviceTypeRole:    return dev.deviceType;
     default:                return {};
     }
 }
@@ -40,6 +41,7 @@ QHash<int, QByteArray> NetworkAudioModel::roleNames() const
         {StatusRole,        "status"},
         {AutoConnectRole,   "autoConnect"},
         {HasPreferenceRole, "hasPreference"},
+        {DeviceTypeRole,    "deviceType"},
     };
 }
 

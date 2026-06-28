@@ -33,6 +33,7 @@ private Q_SLOTS:
 private:
     void createResolver(int interface, int protocol, const QString &name,
                         const QString &type, const QString &domain);
+    static QString detectDeviceType(const QString &am, const QString &hostname);
     static QString stripMacPrefix(const QString &rawName);
     static QString makeId(const QString &name, const QString &host);
 
