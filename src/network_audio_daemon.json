@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "Authors": [{"Email": "jlgrant85@gmail.com", "Name": "John Grant"}],
+        "Authors": [{"Email": "john@johngrant.dev", "Name": "John Grant"}],
         "Description": "Manages network audio device discovery and auto-connection",
         "License": "GPL-2.0-or-later",
         "Name": "Network Audio"

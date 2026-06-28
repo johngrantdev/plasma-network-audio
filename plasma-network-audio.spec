@@ -38,5 +38,5 @@ cp -a %{staging}/* %{buildroot}/
 %{_datadir}/knotifications6/kded_network_audio.notifyrc
 
 %changelog
-* %(date "+%%a %%b %%d %%Y") John Grant <jlgrant85@gmail.com> - %{version}-%{release}
+* %(date "+%%a %%b %%d %%Y") John Grant <john@johngrant.dev> - %{version}-%{release}
 - Alpha release
