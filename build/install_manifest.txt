@@ -1,4 +1,0 @@
-/var/home/laptop/.local/lib64/plugins/plasma/kcms/systemsettings/kcm_network_audio.so
-/var/home/laptop/.local/share/applications/kcm_network_audio.desktop
-/var/home/laptop/.local/lib64/plugins/kf6/kded/kded_network_audio.so
-/var/home/laptop/.local/share/knotifications6/kded_network_audio.notifyrc
