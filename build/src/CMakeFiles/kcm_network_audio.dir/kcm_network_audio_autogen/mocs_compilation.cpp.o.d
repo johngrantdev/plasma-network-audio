@@ -1,8 +1,11 @@
 src/CMakeFiles/kcm_network_audio.dir/kcm_network_audio_autogen/mocs_compilation.cpp.o: \
  /var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio_autogen/EWIEGA46WW/moc_avahi_browser.cpp \
- /var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio_autogen/EWIEGA46WW/../../../../src/avahi_browser.h \
+ /var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio_autogen/EWIEGA46WW/moc_network_audio_kcm.cpp \
+ /var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio_autogen/EWIEGA46WW/../../../../src/network_audio_kcm.h \
+ /usr/include/KF6/KCMUtilsQuick/KQuickConfigModule \
+ /usr/include/KF6/KCMUtilsQuick/kquickconfigmodule.h \
+ /usr/include/KF6/KCMUtilsQuick/kcmutilsquick_export.h \
  /usr/include/qt6/QtCore/QObject /usr/include/qt6/QtCore/qobject.h \
  /usr/include/qt6/QtCore/qobjectdefs.h \
  /usr/include/qt6/QtCore/qnamespace.h /usr/include/qt6/QtCore/qglobal.h \
@@ -279,20 +282,7 @@ src/CMakeFiles/kcm_network_audio.dir/kcm_network_audio_autogen/mocs_compilation.
  /usr/include/qt6/QtCore/qobject_impl.h \
  /usr/include/qt6/QtCore/qbindingstorage.h /usr/include/c++/15/chrono \
  /usr/include/c++/15/bits/chrono.h /usr/include/c++/15/ratio \
- /usr/include/c++/15/ctime /usr/include/qt6/QtCore/QStringList \
- /usr/include/qt6/QtCore/qstringlist.h \
- /var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio_autogen/EWIEGA46WW/../../../../src/network_audio_device.h \
- /usr/include/qt6/QtCore/QString /usr/include/qt6/QtCore/qstring.h \
- /usr/include/qt6/QtCore/QList /usr/include/qt6/QtCore/qlist.h \
- /usr/include/qt6/QtCore/qtmochelpers.h \
- /usr/include/qt6/QtCore/qtmocconstants.h \
- /usr/include/qt6/QtCore/q20algorithm.h \
- /var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio_autogen/EWIEGA46WW/moc_network_audio_kcm.cpp \
- /var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio_autogen/EWIEGA46WW/../../../../src/network_audio_kcm.h \
- /usr/include/KF6/KCMUtilsQuick/KQuickConfigModule \
- /usr/include/KF6/KCMUtilsQuick/kquickconfigmodule.h \
- /usr/include/KF6/KCMUtilsQuick/kcmutilsquick_export.h \
- /usr/include/qt6/QtQml/QQmlComponent \
+ /usr/include/c++/15/ctime /usr/include/qt6/QtQml/QQmlComponent \
  /usr/include/qt6/QtQml/qqmlcomponent.h \
  /usr/include/qt6/QtCore/qvariant.h /usr/include/qt6/QtCore/qdebug.h \
  /usr/include/qt6/QtCore/qtextstream.h \
@@ -334,7 +324,8 @@ src/CMakeFiles/kcm_network_audio.dir/kcm_network_audio_autogen/mocs_compilation.
  /usr/include/qt6/QtCore/qtyperevision.h \
  /usr/include/qt6/QtQml/qqmlregistration.h \
  /usr/include/qt6/QtQmlIntegration/qqmlintegration.h \
- /usr/include/qt6/QtQml/qqmlerror.h /usr/include/qt6/QtCore/QVariant \
+ /usr/include/qt6/QtQml/qqmlerror.h /usr/include/qt6/QtCore/QStringList \
+ /usr/include/qt6/QtCore/qstringlist.h /usr/include/qt6/QtCore/QVariant \
  /usr/include/qt6/QtCore/qvariant.h \
  /usr/include/KF6/KCoreAddons/KPluginFactory \
  /usr/include/KF6/KCoreAddons/kpluginfactory.h \
@@ -353,6 +344,7 @@ src/CMakeFiles/kcm_network_audio.dir/kcm_network_audio_autogen/mocs_compilation.
  /usr/include/qt6/QtCore/qjsondocument.h \
  /usr/include/qt6/QtCore/qjsonparseerror.h \
  /usr/include/qt6/QtCore/QMetaType /usr/include/qt6/QtCore/qmetatype.h \
+ /usr/include/qt6/QtCore/QString /usr/include/qt6/QtCore/qstring.h \
  /usr/include/KF6/KCoreAddons/KPluginMetaData \
  /usr/include/qt6/QtQmlIntegration/qqmlintegration.h \
  /usr/include/KF6/KCMUtilsCore/kabstractconfigmodule.h \
@@ -362,7 +354,9 @@ src/CMakeFiles/kcm_network_audio.dir/kcm_network_audio_autogen/mocs_compilation.
  /var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio_autogen/EWIEGA46WW/../../../../src/network_audio_model.h \
  /usr/include/qt6/QtCore/QAbstractListModel \
  /usr/include/qt6/QtCore/qabstractitemmodel.h \
- /usr/include/qt6/QtCore/QList \
- /var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio_autogen/EWIEGA46WW/../../../../src/pipewire_controller.h \
- /var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio_autogen/EWIEGA46WW/moc_network_audio_model.cpp \
- /var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio_autogen/EWIEGA46WW/moc_pipewire_controller.cpp
+ /usr/include/qt6/QtCore/QList /usr/include/qt6/QtCore/qlist.h \
+ /var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio_autogen/EWIEGA46WW/../../../../src/network_audio_device.h \
+ /usr/include/qt6/QtCore/qtmochelpers.h \
+ /usr/include/qt6/QtCore/qtmocconstants.h \
+ /usr/include/qt6/QtCore/q20algorithm.h \
+ /var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio_autogen/EWIEGA46WW/moc_network_audio_model.cpp

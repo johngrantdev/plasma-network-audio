@@ -44,9 +44,9 @@ template <> constexpr inline auto NetworkAudioModel::qt_create_metaobjectdata<qt
         "NetworkAudioDevice",
         "device",
         "removeDevice",
-        "rawName",
-        "setConnected",
         "id",
+        "updateDevice",
+        "setConnected",
         "setDisconnected"
     };
 
@@ -59,13 +59,17 @@ template <> constexpr inline auto NetworkAudioModel::qt_create_metaobjectdata<qt
         QtMocHelpers::SlotData<void(const QString &)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QString, 6 },
         }}),
+        // Slot 'updateDevice'
+        QtMocHelpers::SlotData<void(const NetworkAudioDevice &)>(7, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 3, 4 },
+        }}),
         // Slot 'setConnected'
-        QtMocHelpers::SlotData<void(const QString &)>(7, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 8 },
+        QtMocHelpers::SlotData<void(const QString &)>(8, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 6 },
         }}),
         // Slot 'setDisconnected'
         QtMocHelpers::SlotData<void(const QString &)>(9, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 8 },
+            { QMetaType::QString, 6 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -92,8 +96,9 @@ void NetworkAudioModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         switch (_id) {
         case 0: _t->addDevice((*reinterpret_cast<std::add_pointer_t<NetworkAudioDevice>>(_a[1]))); break;
         case 1: _t->removeDevice((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 2: _t->setConnected((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 3: _t->setDisconnected((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 2: _t->updateDevice((*reinterpret_cast<std::add_pointer_t<NetworkAudioDevice>>(_a[1]))); break;
+        case 3: _t->setConnected((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 4: _t->setDisconnected((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
         default: ;
         }
     }
@@ -118,14 +123,14 @@ int NetworkAudioModel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }

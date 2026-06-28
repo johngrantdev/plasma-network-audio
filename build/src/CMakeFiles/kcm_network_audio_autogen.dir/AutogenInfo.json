@@ -16,12 +16,6 @@
 	"HEADERS" : 
 	[
 		[
-			"/var/home/laptop/projects/plasma-network-audio/src/avahi_browser.h",
-			"Mu",
-			"EWIEGA46WW/moc_avahi_browser.cpp",
-			null
-		],
-		[
 			"/var/home/laptop/projects/plasma-network-audio/src/network_audio_kcm.h",
 			"Mu",
 			"EWIEGA46WW/moc_network_audio_kcm.cpp",
@@ -31,12 +25,6 @@
 			"/var/home/laptop/projects/plasma-network-audio/src/network_audio_model.h",
 			"Mu",
 			"EWIEGA46WW/moc_network_audio_model.cpp",
-			null
-		],
-		[
-			"/var/home/laptop/projects/plasma-network-audio/src/pipewire_controller.h",
-			"Mu",
-			"EWIEGA46WW/moc_pipewire_controller.cpp",
 			null
 		]
 	],
@@ -135,22 +123,12 @@
 	"SOURCES" : 
 	[
 		[
-			"/var/home/laptop/projects/plasma-network-audio/src/avahi_browser.cpp",
-			"Mu",
-			null
-		],
-		[
 			"/var/home/laptop/projects/plasma-network-audio/src/network_audio_kcm.cpp",
 			"Mu",
 			null
 		],
 		[
 			"/var/home/laptop/projects/plasma-network-audio/src/network_audio_model.cpp",
-			"Mu",
-			null
-		],
-		[
-			"/var/home/laptop/projects/plasma-network-audio/src/pipewire_controller.cpp",
 			"Mu",
 			null
 		]

@@ -225,6 +225,19 @@ kcm_network_audio-kcm-desktop-gen/fast:
 .PHONY : kcm_network_audio-kcm-desktop-gen/fast
 
 #=============================================================================
+# Target rules for targets named kded_network_audio
+
+# Build rule for target.
+kded_network_audio: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kded_network_audio
+.PHONY : kded_network_audio
+
+# fast build rule for target.
+kded_network_audio/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/build
+.PHONY : kded_network_audio/fast
+
+#=============================================================================
 # Target rules for targets named kcm_network_audio_autogen_timestamp_deps
 
 # Build rule for target.
@@ -250,6 +263,32 @@ kcm_network_audio_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/kcm_network_audio_autogen.dir/build.make src/CMakeFiles/kcm_network_audio_autogen.dir/build
 .PHONY : kcm_network_audio_autogen/fast
 
+#=============================================================================
+# Target rules for targets named kded_network_audio_autogen_timestamp_deps
+
+# Build rule for target.
+kded_network_audio_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kded_network_audio_autogen_timestamp_deps
+.PHONY : kded_network_audio_autogen_timestamp_deps
+
+# fast build rule for target.
+kded_network_audio_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio_autogen_timestamp_deps.dir/build.make src/CMakeFiles/kded_network_audio_autogen_timestamp_deps.dir/build
+.PHONY : kded_network_audio_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named kded_network_audio_autogen
+
+# Build rule for target.
+kded_network_audio_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kded_network_audio_autogen
+.PHONY : kded_network_audio_autogen
+
+# fast build rule for target.
+kded_network_audio_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio_autogen.dir/build.make src/CMakeFiles/kded_network_audio_autogen.dir/build
+.PHONY : kded_network_audio_autogen/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -267,8 +306,11 @@ help:
 	@echo "... kcm_network_audio-kcm-desktop-gen"
 	@echo "... kcm_network_audio_autogen"
 	@echo "... kcm_network_audio_autogen_timestamp_deps"
+	@echo "... kded_network_audio_autogen"
+	@echo "... kded_network_audio_autogen_timestamp_deps"
 	@echo "... uninstall"
 	@echo "... kcm_network_audio"
+	@echo "... kded_network_audio"
 .PHONY : help
 
 

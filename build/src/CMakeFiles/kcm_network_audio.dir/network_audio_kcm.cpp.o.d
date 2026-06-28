@@ -355,9 +355,24 @@ src/CMakeFiles/kcm_network_audio.dir/network_audio_kcm.cpp.o: \
  /usr/include/qt6/QtCore/qabstractitemmodel.h \
  /usr/include/qt6/QtCore/QList /usr/include/qt6/QtCore/qlist.h \
  /var/home/laptop/projects/plasma-network-audio/src/network_audio_device.h \
- /var/home/laptop/projects/plasma-network-audio/src/avahi_browser.h \
- /var/home/laptop/projects/plasma-network-audio/src/pipewire_controller.h \
- /usr/include/qt6/QtCore/QDebug /usr/include/qt6/QtCore/qdebug.h \
+ /usr/include/qt6/QtDBus/QDBusConnection \
+ /usr/include/qt6/QtDBus/qdbusconnection.h \
+ /usr/include/qt6/QtDBus/qtdbusglobal.h \
+ /usr/include/qt6/QtDBus/qtdbusexports.h \
+ /usr/include/qt6/QtDBus/QDBusInterface \
+ /usr/include/qt6/QtDBus/qdbusinterface.h \
+ /usr/include/qt6/QtDBus/qdbusabstractinterface.h \
+ /usr/include/qt6/QtDBus/qdbusmessage.h \
+ /usr/include/qt6/QtDBus/qdbuserror.h \
+ /usr/include/qt6/QtDBus/qdbusextratypes.h \
+ /usr/include/qt6/QtDBus/qdbusconnection.h \
+ /usr/include/qt6/QtDBus/qdbuspendingcall.h \
+ /usr/include/qt6/QtDBus/QDBusReply /usr/include/qt6/QtDBus/qdbusreply.h \
+ /usr/include/qt6/QtDBus/qdbuspendingreply.h \
+ /usr/include/qt6/QtDBus/qdbusargument.h \
+ /usr/include/qt6/QtDBus/QDBusMetaType \
+ /usr/include/qt6/QtDBus/qdbusmetatype.h /usr/include/qt6/QtCore/QDebug \
+ /usr/include/qt6/QtCore/qdebug.h \
  /var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio_autogen/include/network_audio_kcm.moc \
  /usr/include/qt6/QtCore/qplugin.h /usr/include/qt6/QtCore/qjsonobject.h \
  /usr/include/qt6/QtCore/q20algorithm.h \

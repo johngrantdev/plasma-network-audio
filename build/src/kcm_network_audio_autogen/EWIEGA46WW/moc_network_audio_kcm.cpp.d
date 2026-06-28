@@ -461,7 +461,5 @@
   /usr/lib/gcc/x86_64-redhat-linux/15/include/stdarg.h \
   /usr/lib/gcc/x86_64-redhat-linux/15/include/stdbool.h \
   /usr/lib/gcc/x86_64-redhat-linux/15/include/stddef.h \
-  /var/home/laptop/projects/plasma-network-audio/src/avahi_browser.h \
   /var/home/laptop/projects/plasma-network-audio/src/network_audio_device.h \
-  /var/home/laptop/projects/plasma-network-audio/src/network_audio_model.h \
-  /var/home/laptop/projects/plasma-network-audio/src/pipewire_controller.h
+  /var/home/laptop/projects/plasma-network-audio/src/network_audio_model.h

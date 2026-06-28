@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Authors": [{"Email": "jlgrant85@gmail.com", "Name": "John Grant"}],
+        "Description": "Manages network audio device discovery and auto-connection",
+        "License": "GPL-2.0-or-later",
+        "Name": "Network Audio"
+    },
+    "X-KDE-Kded-autoload": true,
+    "X-KDE-Kded-phase": 2
+}

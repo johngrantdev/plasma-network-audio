@@ -9,6 +9,7 @@
 /var/home/laptop/projects/plasma-network-audio/build/CMakeFiles/install/strip.dir
 /var/home/laptop/projects/plasma-network-audio/build/src/CMakeFiles/kcm_network_audio.dir
 /var/home/laptop/projects/plasma-network-audio/build/src/CMakeFiles/kcm_network_audio-kcm-desktop-gen.dir
+/var/home/laptop/projects/plasma-network-audio/build/src/CMakeFiles/kded_network_audio.dir
 /var/home/laptop/projects/plasma-network-audio/build/src/CMakeFiles/test.dir
 /var/home/laptop/projects/plasma-network-audio/build/src/CMakeFiles/edit_cache.dir
 /var/home/laptop/projects/plasma-network-audio/build/src/CMakeFiles/rebuild_cache.dir
@@ -18,3 +19,5 @@
 /var/home/laptop/projects/plasma-network-audio/build/src/CMakeFiles/install/strip.dir
 /var/home/laptop/projects/plasma-network-audio/build/src/CMakeFiles/kcm_network_audio_autogen_timestamp_deps.dir
 /var/home/laptop/projects/plasma-network-audio/build/src/CMakeFiles/kcm_network_audio_autogen.dir
+/var/home/laptop/projects/plasma-network-audio/build/src/CMakeFiles/kded_network_audio_autogen_timestamp_deps.dir
+/var/home/laptop/projects/plasma-network-audio/build/src/CMakeFiles/kded_network_audio_autogen.dir

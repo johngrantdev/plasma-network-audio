@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr")
+  set(CMAKE_INSTALL_PREFIX "/var/home/laptop/.local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -47,11 +47,15 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "plasma-network-audio" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/plugins/plasma/kcms/systemsettings/kcm_network_audio.so")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/plugins/plasma/kcms/systemsettings/kcm_network_audio.so"
-         RPATH "")
+         RPATH "/var/home/laptop/.local/lib64")
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/plugins/plasma/kcms/systemsettings" TYPE MODULE FILES "/var/home/laptop/projects/plasma-network-audio/build/bin/plasma/kcms/systemsettings/kcm_network_audio.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/plugins/plasma/kcms/systemsettings/kcm_network_audio.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/plugins/plasma/kcms/systemsettings/kcm_network_audio.so")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/plugins/plasma/kcms/systemsettings/kcm_network_audio.so"
+         OLD_RPATH ":::::::::::::::::::::::::::::"
+         NEW_RPATH "/var/home/laptop/.local/lib64")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/plugins/plasma/kcms/systemsettings/kcm_network_audio.so")
     endif()
@@ -64,6 +68,34 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "plasma-network-audio" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications" TYPE FILE FILES "/var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio.desktop")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "plasma-network-audio" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/plugins/kf6/kded/kded_network_audio.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/plugins/kf6/kded/kded_network_audio.so")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/plugins/kf6/kded/kded_network_audio.so"
+         RPATH "/var/home/laptop/.local/lib64")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/plugins/kf6/kded" TYPE MODULE FILES "/var/home/laptop/projects/plasma-network-audio/build/bin/kf6/kded/kded_network_audio.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/plugins/kf6/kded/kded_network_audio.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/plugins/kf6/kded/kded_network_audio.so")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/plugins/kf6/kded/kded_network_audio.so"
+         OLD_RPATH ":::::::::::::::::::::::::::::"
+         NEW_RPATH "/var/home/laptop/.local/lib64")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/plugins/kf6/kded/kded_network_audio.so")
+    endif()
+  endif()
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "plasma-network-audio" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("/var/home/laptop/projects/plasma-network-audio/build/src/CMakeFiles/kded_network_audio.dir/install-cxx-module-bmi-Debug.cmake" OPTIONAL)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "plasma-network-audio" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/knotifications6" TYPE FILE FILES "/var/home/laptop/projects/plasma-network-audio/src/kded_network_audio.notifyrc")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT

@@ -9,17 +9,26 @@ QQC2.ItemDelegate {
     required property string deviceId
     required property string name
     required property string host
-    required property bool connected
+    required property bool   connected
+    required property int    status        // NetworkAudioDevice::Status as int
+    required property bool   autoConnect
+    required property bool   hasPreference
+
+    readonly property bool isAvailable: status === 0
+    readonly property bool isIgnored:   status === 2
 
     signal connectRequested
     signal disconnectRequested
+    signal autoConnectToggled(bool enabled)
+    signal forgetRequested
 
     contentItem: RowLayout {
         spacing: Kirigami.Units.smallSpacing
 
         Kirigami.Icon {
             source: "audio-speakers"
-            Layout.preferredWidth: Kirigami.Units.iconSizes.medium
+            opacity: root.isAvailable ? 1.0 : 0.5
+            Layout.preferredWidth:  Kirigami.Units.iconSizes.medium
             Layout.preferredHeight: Kirigami.Units.iconSizes.medium
             Layout.alignment: Qt.AlignVCenter
         }
@@ -35,6 +44,7 @@ QQC2.ItemDelegate {
             }
 
             QQC2.Label {
+                visible: root.isAvailable && root.host.length > 0
                 text: root.host
                 Layout.fillWidth: true
                 elide: Text.ElideRight
@@ -43,10 +53,28 @@ QQC2.ItemDelegate {
             }
         }
 
+        // Auto-connect checkbox — shown for Available and Offline, not Ignored
+        QQC2.CheckBox {
+            visible: !root.isIgnored
+            checked: root.autoConnect
+            text: i18n("Auto-connect")
+            onToggled: root.autoConnectToggled(checked)
+        }
+
+        // Connect/Disconnect — only for Available devices
         QQC2.Button {
+            visible: root.isAvailable
             text: root.connected ? i18n("Disconnect") : i18n("Connect")
             icon.name: root.connected ? "network-disconnect" : "network-connect"
             onClicked: root.connected ? root.disconnectRequested() : root.connectRequested()
+        }
+
+        // Forget — shown whenever a preference entry exists
+        QQC2.Button {
+            visible: root.hasPreference
+            text: i18n("Forget")
+            icon.name: "edit-delete-remove"
+            onClicked: root.forgetRequested()
         }
     }
 }

@@ -41,9 +41,21 @@ template <> constexpr inline auto NetworkAudioKCM::qt_create_metaobjectdata<qt_m
         "NetworkAudioKCM",
         "lastErrorChanged",
         "",
-        "connectDevice",
+        "onDeviceDiscovered",
+        "QVariantMap",
+        "device",
+        "onDeviceRemoved",
         "id",
+        "onDeviceConnected",
+        "onDeviceDisconnected",
+        "onDeviceError",
+        "message",
+        "onDeviceUpdated",
+        "connectDevice",
         "disconnectDevice",
+        "setAutoConnect",
+        "enabled",
+        "forgetDevice",
         "clearLastError",
         "deviceModel",
         "NetworkAudioModel*",
@@ -53,22 +65,54 @@ template <> constexpr inline auto NetworkAudioKCM::qt_create_metaobjectdata<qt_m
     QtMocHelpers::UintData qt_methods {
         // Signal 'lastErrorChanged'
         QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
+        // Slot 'onDeviceDiscovered'
+        QtMocHelpers::SlotData<void(const QVariantMap &)>(3, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 4, 5 },
+        }}),
+        // Slot 'onDeviceRemoved'
+        QtMocHelpers::SlotData<void(const QString &)>(6, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 7 },
+        }}),
+        // Slot 'onDeviceConnected'
+        QtMocHelpers::SlotData<void(const QString &)>(8, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 7 },
+        }}),
+        // Slot 'onDeviceDisconnected'
+        QtMocHelpers::SlotData<void(const QString &)>(9, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 7 },
+        }}),
+        // Slot 'onDeviceError'
+        QtMocHelpers::SlotData<void(const QString &, const QString &)>(10, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 7 }, { QMetaType::QString, 11 },
+        }}),
+        // Slot 'onDeviceUpdated'
+        QtMocHelpers::SlotData<void(const QVariantMap &)>(12, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 4, 5 },
+        }}),
         // Method 'connectDevice'
-        QtMocHelpers::MethodData<void(const QString &)>(3, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 4 },
+        QtMocHelpers::MethodData<void(const QString &)>(13, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 7 },
         }}),
         // Method 'disconnectDevice'
-        QtMocHelpers::MethodData<void(const QString &)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 4 },
+        QtMocHelpers::MethodData<void(const QString &)>(14, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 7 },
+        }}),
+        // Method 'setAutoConnect'
+        QtMocHelpers::MethodData<void(const QString &, bool)>(15, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 7 }, { QMetaType::Bool, 16 },
+        }}),
+        // Method 'forgetDevice'
+        QtMocHelpers::MethodData<void(const QString &)>(17, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 7 },
         }}),
         // Method 'clearLastError'
-        QtMocHelpers::MethodData<void()>(6, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::MethodData<void()>(18, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
         // property 'deviceModel'
-        QtMocHelpers::PropertyData<NetworkAudioModel*>(7, 0x80000000 | 8, QMC::DefaultPropertyFlags | QMC::EnumOrFlag | QMC::Constant),
+        QtMocHelpers::PropertyData<NetworkAudioModel*>(19, 0x80000000 | 20, QMC::DefaultPropertyFlags | QMC::EnumOrFlag | QMC::Constant),
         // property 'lastError'
-        QtMocHelpers::PropertyData<QString>(9, QMetaType::QString, QMC::DefaultPropertyFlags, 0),
+        QtMocHelpers::PropertyData<QString>(21, QMetaType::QString, QMC::DefaultPropertyFlags, 0),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -91,9 +135,17 @@ void NetworkAudioKCM::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->lastErrorChanged(); break;
-        case 1: _t->connectDevice((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 2: _t->disconnectDevice((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 3: _t->clearLastError(); break;
+        case 1: _t->onDeviceDiscovered((*reinterpret_cast<std::add_pointer_t<QVariantMap>>(_a[1]))); break;
+        case 2: _t->onDeviceRemoved((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 3: _t->onDeviceConnected((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 4: _t->onDeviceDisconnected((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 5: _t->onDeviceError((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2]))); break;
+        case 6: _t->onDeviceUpdated((*reinterpret_cast<std::add_pointer_t<QVariantMap>>(_a[1]))); break;
+        case 7: _t->connectDevice((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 8: _t->disconnectDevice((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 9: _t->setAutoConnect((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<bool>>(_a[2]))); break;
+        case 10: _t->forgetDevice((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 11: _t->clearLastError(); break;
         default: ;
         }
     }
@@ -137,14 +189,14 @@ int NetworkAudioKCM::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 12;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 12)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 12;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty

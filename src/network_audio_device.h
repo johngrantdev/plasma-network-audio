@@ -3,6 +3,8 @@
 #include <QString>
 
 struct NetworkAudioDevice {
+    enum class Status { Available, Offline, Ignored };
+
     QString id;              // unique key: "rawAvahiName@host"
     QString name;            // display name (MAC prefix stripped)
     QString avahiName;       // raw Avahi name, e.g. "542A1B855FEC@Family Room"
@@ -15,4 +17,8 @@ struct NetworkAudioDevice {
     QString encryptionType;  // raop.encryption.type, e.g. "auth_setup"
     QString transport;       // raop.transport, e.g. "udp"
     bool connected = false;
+
+    Status status = Status::Available;
+    bool autoConnect = false;
+    bool hasPreference = false;  // true when a KConfig entry exists for this id
 };

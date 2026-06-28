@@ -428,6 +428,23 @@
   /usr/include/qt6/QtCore/qversiontagging.h \
   /usr/include/qt6/QtCore/qxptype_traits.h \
   /usr/include/qt6/QtCore/qyieldcpu.h \
+  /usr/include/qt6/QtDBus/QDBusConnection \
+  /usr/include/qt6/QtDBus/QDBusInterface \
+  /usr/include/qt6/QtDBus/QDBusMetaType \
+  /usr/include/qt6/QtDBus/QDBusReply \
+  /usr/include/qt6/QtDBus/qdbusabstractinterface.h \
+  /usr/include/qt6/QtDBus/qdbusargument.h \
+  /usr/include/qt6/QtDBus/qdbusconnection.h \
+  /usr/include/qt6/QtDBus/qdbuserror.h \
+  /usr/include/qt6/QtDBus/qdbusextratypes.h \
+  /usr/include/qt6/QtDBus/qdbusinterface.h \
+  /usr/include/qt6/QtDBus/qdbusmessage.h \
+  /usr/include/qt6/QtDBus/qdbusmetatype.h \
+  /usr/include/qt6/QtDBus/qdbuspendingcall.h \
+  /usr/include/qt6/QtDBus/qdbuspendingreply.h \
+  /usr/include/qt6/QtDBus/qdbusreply.h \
+  /usr/include/qt6/QtDBus/qtdbusexports.h \
+  /usr/include/qt6/QtDBus/qtdbusglobal.h \
   /usr/include/qt6/QtNetwork/qtnetwork-config.h \
   /usr/include/qt6/QtNetwork/qtnetworkexports.h \
   /usr/include/qt6/QtNetwork/qtnetworkglobal.h \
@@ -463,8 +480,6 @@
   /usr/lib/gcc/x86_64-redhat-linux/15/include/stdarg.h \
   /usr/lib/gcc/x86_64-redhat-linux/15/include/stdbool.h \
   /usr/lib/gcc/x86_64-redhat-linux/15/include/stddef.h \
-  /var/home/laptop/projects/plasma-network-audio/src/avahi_browser.h \
   /var/home/laptop/projects/plasma-network-audio/src/network_audio_device.h \
   /var/home/laptop/projects/plasma-network-audio/src/network_audio_kcm.h \
-  /var/home/laptop/projects/plasma-network-audio/src/network_audio_model.h \
-  /var/home/laptop/projects/plasma-network-audio/src/pipewire_controller.h
+  /var/home/laptop/projects/plasma-network-audio/src/network_audio_model.h

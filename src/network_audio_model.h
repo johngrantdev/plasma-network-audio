@@ -14,6 +14,9 @@ public:
         HostRole,
         PortRole,
         ConnectedRole,
+        StatusRole,
+        AutoConnectRole,
+        HasPreferenceRole,
     };
 
     explicit NetworkAudioModel(QObject *parent = nullptr);
@@ -26,12 +29,14 @@ public:
 
 public Q_SLOTS:
     void addDevice(const NetworkAudioDevice &device);
-    void removeDevice(const QString &rawName);
+    void removeDevice(const QString &id);
+    void updateDevice(const NetworkAudioDevice &device);
     void setConnected(const QString &id);
     void setDisconnected(const QString &id);
 
 private:
     int indexForId(const QString &id) const;
+    int insertionIndexFor(NetworkAudioDevice::Status status) const;
 
     QList<NetworkAudioDevice> m_devices;
 };

@@ -100,7 +100,7 @@ CMAKE_INSTALL_DOCDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=/usr
+CMAKE_INSTALL_PREFIX:PATH=/var/home/laptop/.local
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -352,8 +352,8 @@ KDE_INSTALL_MIMEDIR:PATH=
 //Plugins (QTPLUGINDIR)
 KDE_INSTALL_PLUGINDIR:PATH=
 
-//Installs /usr/prefix.sh that sets up the necessary environment
-// variables
+//Installs /var/home/laptop/.local/prefix.sh that sets up the necessary
+// environment variables
 KDE_INSTALL_PREFIX_SCRIPT:BOOL=OFF
 
 //documentation bundles in QCH format (DATAROOTDIR/doc/qch)
@@ -431,11 +431,23 @@ KF6Config_DIR:PATH=/usr/lib64/cmake/KF6Config
 //The directory containing a CMake configuration file for KF6CoreAddons.
 KF6CoreAddons_DIR:PATH=/usr/lib64/cmake/KF6CoreAddons
 
+//The directory containing a CMake configuration file for KF6DBusAddons.
+KF6DBusAddons_DIR:PATH=/usr/lib64/cmake/KF6DBusAddons
+
 //The directory containing a CMake configuration file for KF6I18n.
 KF6I18n_DIR:PATH=/usr/lib64/cmake/KF6I18n
 
 //The directory containing a CMake configuration file for KF6KCMUtils.
 KF6KCMUtils_DIR:PATH=/usr/lib64/cmake/KF6KCMUtils
+
+//The directory containing a CMake configuration file for KF6KDEDModule.
+KF6KDEDModule_DIR:PATH=KF6KDEDModule_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for KF6KDED.
+KF6KDED_DIR:PATH=/usr/lib64/cmake/KF6KDED
+
+//The directory containing a CMake configuration file for KF6Notifications.
+KF6Notifications_DIR:PATH=/usr/lib64/cmake/KF6Notifications
 
 //The directory containing a CMake configuration file for KF6WidgetsAddons.
 KF6WidgetsAddons_DIR:PATH=/usr/lib64/cmake/KF6WidgetsAddons
@@ -725,13 +737,21 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Gettext
 FIND_PACKAGE_MESSAGE_DETAILS_Gettext:INTERNAL=[/usr/bin/msgmerge][/usr/bin/msgfmt][v0.23.1()]
 //Details about finding KF6
-FIND_PACKAGE_MESSAGE_DETAILS_KF6:INTERNAL=[success][cfound components: CoreAddons I18n KCMUtils ][v6.25.0()]
+FIND_PACKAGE_MESSAGE_DETAILS_KF6:INTERNAL=[success][cfound components: CoreAddons I18n KCMUtils DBusAddons Notifications Config ][v6.25.0()]
+//Details about finding KF6Config
+FIND_PACKAGE_MESSAGE_DETAILS_KF6Config:INTERNAL=[/usr/lib64/cmake/KF6Config/KF6ConfigConfig.cmake][v6.25.0()]
 //Details about finding KF6CoreAddons
 FIND_PACKAGE_MESSAGE_DETAILS_KF6CoreAddons:INTERNAL=[/usr/lib64/cmake/KF6CoreAddons/KF6CoreAddonsConfig.cmake][v6.25.0()]
+//Details about finding KF6DBusAddons
+FIND_PACKAGE_MESSAGE_DETAILS_KF6DBusAddons:INTERNAL=[/usr/lib64/cmake/KF6DBusAddons/KF6DBusAddonsConfig.cmake][v6.25.0()]
 //Details about finding KF6I18n
 FIND_PACKAGE_MESSAGE_DETAILS_KF6I18n:INTERNAL=[/usr/lib64/cmake/KF6I18n/KF6I18nConfig.cmake][v6.25.0()]
 //Details about finding KF6KCMUtils
 FIND_PACKAGE_MESSAGE_DETAILS_KF6KCMUtils:INTERNAL=[/usr/lib64/cmake/KF6KCMUtils/KF6KCMUtilsConfig.cmake][v6.25.0()]
+//Details about finding KF6KDED
+FIND_PACKAGE_MESSAGE_DETAILS_KF6KDED:INTERNAL=[/usr/lib64/cmake/KF6KDED/KF6KDEDConfig.cmake][v6.25.0()]
+//Details about finding KF6Notifications
+FIND_PACKAGE_MESSAGE_DETAILS_KF6Notifications:INTERNAL=[/usr/lib64/cmake/KF6Notifications/KF6NotificationsConfig.cmake][v6.25.0()]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib64/libOpenGL.so][/usr/lib64/libGLX.so][/usr/include][c ][v()]
 //Details about finding Threads
@@ -1850,7 +1870,7 @@ Vulkan_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Vulkan_LIBRARY
 Vulkan_LIBRARY-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/var/home/laptop/.local
 //Test _OFFT_IS_64BIT
 _OFFT_IS_64BIT:INTERNAL=1
 __qt_qml_macros_module_base_dir:INTERNAL=/usr/lib64/cmake/Qt6Qml

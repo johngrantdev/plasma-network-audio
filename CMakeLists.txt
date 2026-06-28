@@ -17,6 +17,13 @@ if(NOT CMAKE_LIBRARY_OUTPUT_DIRECTORY)
 endif()
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Quick DBus)
-find_package(KF6 REQUIRED COMPONENTS CoreAddons I18n KCMUtils)
+find_package(KF6 REQUIRED COMPONENTS
+    CoreAddons
+    I18n
+    KCMUtils
+    DBusAddons
+    Notifications
+    Config
+)
 
 add_subdirectory(src)

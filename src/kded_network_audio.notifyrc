@@ -1,0 +1,8 @@
+[Global]
+Name=Network Audio
+IconName=audio-speakers
+
+[Event/newDeviceFound]
+Name=New Device Found
+Comment=A new network audio device was found on the network
+Action=Popup

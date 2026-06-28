@@ -17,23 +17,29 @@ QVariant NetworkAudioModel::data(const QModelIndex &index, int role) const
 
     const auto &dev = m_devices.at(index.row());
     switch (role) {
-    case IdRole:        return dev.id;
-    case NameRole:      return dev.name;
-    case HostRole:      return dev.host;
-    case PortRole:      return dev.port;
-    case ConnectedRole: return dev.connected;
-    default:            return {};
+    case IdRole:            return dev.id;
+    case NameRole:          return dev.name;
+    case HostRole:          return dev.host;
+    case PortRole:          return dev.port;
+    case ConnectedRole:     return dev.connected;
+    case StatusRole:        return static_cast<int>(dev.status);
+    case AutoConnectRole:   return dev.autoConnect;
+    case HasPreferenceRole: return dev.hasPreference;
+    default:                return {};
     }
 }
 
 QHash<int, QByteArray> NetworkAudioModel::roleNames() const
 {
     return {
-        {IdRole,        "deviceId"},
-        {NameRole,      "name"},
-        {HostRole,      "host"},
-        {PortRole,      "port"},
-        {ConnectedRole, "connected"},
+        {IdRole,            "deviceId"},
+        {NameRole,          "name"},
+        {HostRole,          "host"},
+        {PortRole,          "port"},
+        {ConnectedRole,     "connected"},
+        {StatusRole,        "status"},
+        {AutoConnectRole,   "autoConnect"},
+        {HasPreferenceRole, "hasPreference"},
     };
 }
 
@@ -43,36 +49,64 @@ NetworkAudioDevice NetworkAudioModel::deviceForId(const QString &id) const
     return i >= 0 ? m_devices.at(i) : NetworkAudioDevice{};
 }
 
+// Find the first position whose section is "greater than" status,
+// so new items land at the end of their section.
+int NetworkAudioModel::insertionIndexFor(NetworkAudioDevice::Status status) const
+{
+    using S = NetworkAudioDevice::Status;
+    for (int i = 0; i < m_devices.size(); ++i) {
+        const S s = m_devices.at(i).status;
+        if (status == S::Available && s != S::Available) return i;
+        if (status == S::Offline   && s == S::Ignored)   return i;
+    }
+    return m_devices.size();
+}
+
 void NetworkAudioModel::addDevice(const NetworkAudioDevice &device)
 {
-    // Update in-place if already present (re-resolved after network change)
     const int existing = indexForId(device.id);
     if (existing >= 0) {
-        m_devices[existing].name = device.name;
-        m_devices[existing].host = device.host;
-        m_devices[existing].port = device.port;
-        const QModelIndex idx = index(existing);
-        Q_EMIT dataChanged(idx, idx, {NameRole, HostRole, PortRole});
+        updateDevice(device);
         return;
     }
 
-    beginInsertRows({}, m_devices.size(), m_devices.size());
-    m_devices.append(device);
+    const int pos = insertionIndexFor(device.status);
+    beginInsertRows({}, pos, pos);
+    m_devices.insert(pos, device);
     endInsertRows();
 }
 
-void NetworkAudioModel::removeDevice(const QString &rawName)
+void NetworkAudioModel::removeDevice(const QString &id)
 {
-    // ItemRemove gives us the raw mDNS name (with MAC prefix) but not the host,
-    // so match on any device whose id starts with rawName@
-    for (int i = 0; i < m_devices.size(); ++i) {
-        if (m_devices.at(i).id.startsWith(rawName + QLatin1Char('@'))
-            || m_devices.at(i).id == rawName) {
-            beginRemoveRows({}, i, i);
-            m_devices.removeAt(i);
-            endRemoveRows();
-            return;
-        }
+    const int i = indexForId(id);
+    if (i < 0) return;
+    beginRemoveRows({}, i, i);
+    m_devices.removeAt(i);
+    endRemoveRows();
+}
+
+void NetworkAudioModel::updateDevice(const NetworkAudioDevice &device)
+{
+    const int i = indexForId(device.id);
+    if (i < 0) {
+        addDevice(device);
+        return;
+    }
+
+    if (m_devices.at(i).status != device.status) {
+        // Status changed — remove and re-insert in the correct section
+        beginRemoveRows({}, i, i);
+        m_devices.removeAt(i);
+        endRemoveRows();
+
+        const int pos = insertionIndexFor(device.status);
+        beginInsertRows({}, pos, pos);
+        m_devices.insert(pos, device);
+        endInsertRows();
+    } else {
+        m_devices[i] = device;
+        const QModelIndex idx = index(i);
+        Q_EMIT dataChanged(idx, idx);
     }
 }
 

@@ -1,0 +1,161 @@
+{
+	"BUILD_DIR" : "/var/home/laptop/projects/plasma-network-audio/build/src/kded_network_audio_autogen",
+	"CMAKE_BINARY_DIR" : "/var/home/laptop/projects/plasma-network-audio/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/var/home/laptop/projects/plasma-network-audio/build/src",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/var/home/laptop/projects/plasma-network-audio/src",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/var/home/laptop/projects/plasma-network-audio/src/CMakeLists.txt",
+		"/var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio.qrc"
+	],
+	"CMAKE_SOURCE_DIR" : "/var/home/laptop/projects/plasma-network-audio",
+	"CROSS_CONFIG" : false,
+	"DEP_FILE" : "/var/home/laptop/projects/plasma-network-audio/build/src/kded_network_audio_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "kded_network_audio_autogen/timestamp",
+	"HEADERS" : 
+	[
+		[
+			"/var/home/laptop/projects/plasma-network-audio/src/avahi_browser.h",
+			"Mu",
+			"EWIEGA46WW/moc_avahi_browser.cpp",
+			null
+		],
+		[
+			"/var/home/laptop/projects/plasma-network-audio/src/network_audio_adaptor.h",
+			"Mu",
+			"EWIEGA46WW/moc_network_audio_adaptor.cpp",
+			null
+		],
+		[
+			"/var/home/laptop/projects/plasma-network-audio/src/network_audio_daemon.h",
+			"Mu",
+			"EWIEGA46WW/moc_network_audio_daemon.cpp",
+			null
+		],
+		[
+			"/var/home/laptop/projects/plasma-network-audio/src/pipewire_controller.h",
+			"Mu",
+			"EWIEGA46WW/moc_pipewire_controller.cpp",
+			null
+		],
+		[
+			"/var/home/laptop/projects/plasma-network-audio/src/preference_store.h",
+			"Mu",
+			"EWIEGA46WW/moc_preference_store.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/var/home/laptop/projects/plasma-network-audio/build/src/kded_network_audio_autogen/include",
+	"MOC_COMPILATION_FILE" : "/var/home/laptop/projects/plasma-network-audio/build/src/kded_network_audio_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"KCOREADDONS_LIB",
+		"KPLUGINFACTORY_PLUGIN_CLASS_INTERNAL_NAME=kded_network_audio_factory",
+		"QT_CORE_LIB",
+		"QT_DBUS_LIB",
+		"QT_GUI_LIB",
+		"_GNU_SOURCE",
+		"_LARGEFILE64_SOURCE",
+		"kded_network_audio_EXPORTS"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/var/home/laptop/projects/plasma-network-audio/build/src",
+		"/var/home/laptop/projects/plasma-network-audio/src",
+		"/usr/include/qt6/QtCore",
+		"/usr/include/qt6",
+		"/usr/lib64/qt6/mkspecs/linux-g++",
+		"/usr/include/qt6/QtDBus",
+		"/usr/include/KF6/KCoreAddons",
+		"/usr/include/KF6/KDBusAddons",
+		"/usr/include/KF6/KNotifications",
+		"/usr/include/qt6/QtGui",
+		"/usr/include/KF6/KConfig",
+		"/usr/include/KF6/KConfigCore",
+		"/usr/include/KF6/KI18n",
+		"/usr/include",
+		"/usr/include/c++/15",
+		"/usr/include/c++/15/x86_64-redhat-linux",
+		"/usr/include/c++/15/backward",
+		"/usr/lib/gcc/x86_64-redhat-linux/15/include",
+		"/usr/local/include"
+	],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_NAMESPACE",
+		"Q_NAMESPACE_EXPORT",
+		"Q_GADGET_EXPORT",
+		"Q_ENUM_NS",
+		"K_PLUGIN_FACTORY",
+		"K_PLUGIN_CLASS",
+		"K_PLUGIN_FACTORY_WITH_JSON",
+		"K_PLUGIN_CLASS_WITH_JSON"
+	],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-std=gnu++17",
+		"-w",
+		"-dM",
+		"-E",
+		"/usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/var/home/laptop/projects/plasma-network-audio/build/src/kded_network_audio_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : 
+	[
+		"/var/home/laptop/projects/plasma-network-audio/build/src/kcm_network_audio_autogen/mocs_compilation.cpp",
+		"/var/home/laptop/projects/plasma-network-audio/build/src/qrc_kcm_network_audio.cpp"
+	],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/var/home/laptop/projects/plasma-network-audio/build/src/CMakeFiles/kded_network_audio_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib64/qt6/libexec/moc",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 6,
+	"QT_VERSION_MINOR" : 10,
+	"SETTINGS_FILE" : "/var/home/laptop/projects/plasma-network-audio/build/src/CMakeFiles/kded_network_audio_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/var/home/laptop/projects/plasma-network-audio/src/avahi_browser.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/var/home/laptop/projects/plasma-network-audio/src/network_audio_adaptor.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/var/home/laptop/projects/plasma-network-audio/src/network_audio_daemon.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/var/home/laptop/projects/plasma-network-audio/src/pipewire_controller.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/var/home/laptop/projects/plasma-network-audio/src/preference_store.cpp",
+			"Mu",
+			null
+		]
+	],
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

@@ -114,38 +114,10 @@ src/CMakeFiles/kcm_network_audio.dir/network_audio_kcm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/kcm_network_audio.dir/network_audio_kcm.cpp.s"
 	cd /var/home/laptop/projects/plasma-network-audio/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /var/home/laptop/projects/plasma-network-audio/src/network_audio_kcm.cpp -o CMakeFiles/kcm_network_audio.dir/network_audio_kcm.cpp.s
 
-src/CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.o: src/CMakeFiles/kcm_network_audio.dir/flags.make
-src/CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.o: /var/home/laptop/projects/plasma-network-audio/src/avahi_browser.cpp
-src/CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.o: src/CMakeFiles/kcm_network_audio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/var/home/laptop/projects/plasma-network-audio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.o"
-	cd /var/home/laptop/projects/plasma-network-audio/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.o -MF CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.o.d -o CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.o -c /var/home/laptop/projects/plasma-network-audio/src/avahi_browser.cpp
-
-src/CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.i"
-	cd /var/home/laptop/projects/plasma-network-audio/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /var/home/laptop/projects/plasma-network-audio/src/avahi_browser.cpp > CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.i
-
-src/CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.s"
-	cd /var/home/laptop/projects/plasma-network-audio/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /var/home/laptop/projects/plasma-network-audio/src/avahi_browser.cpp -o CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.s
-
-src/CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.o: src/CMakeFiles/kcm_network_audio.dir/flags.make
-src/CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.o: /var/home/laptop/projects/plasma-network-audio/src/pipewire_controller.cpp
-src/CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.o: src/CMakeFiles/kcm_network_audio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/var/home/laptop/projects/plasma-network-audio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.o"
-	cd /var/home/laptop/projects/plasma-network-audio/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.o -MF CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.o.d -o CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.o -c /var/home/laptop/projects/plasma-network-audio/src/pipewire_controller.cpp
-
-src/CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.i"
-	cd /var/home/laptop/projects/plasma-network-audio/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /var/home/laptop/projects/plasma-network-audio/src/pipewire_controller.cpp > CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.i
-
-src/CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.s"
-	cd /var/home/laptop/projects/plasma-network-audio/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /var/home/laptop/projects/plasma-network-audio/src/pipewire_controller.cpp -o CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.s
-
 src/CMakeFiles/kcm_network_audio.dir/network_audio_model.cpp.o: src/CMakeFiles/kcm_network_audio.dir/flags.make
 src/CMakeFiles/kcm_network_audio.dir/network_audio_model.cpp.o: /var/home/laptop/projects/plasma-network-audio/src/network_audio_model.cpp
 src/CMakeFiles/kcm_network_audio.dir/network_audio_model.cpp.o: src/CMakeFiles/kcm_network_audio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/var/home/laptop/projects/plasma-network-audio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/kcm_network_audio.dir/network_audio_model.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/var/home/laptop/projects/plasma-network-audio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/kcm_network_audio.dir/network_audio_model.cpp.o"
 	cd /var/home/laptop/projects/plasma-network-audio/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/kcm_network_audio.dir/network_audio_model.cpp.o -MF CMakeFiles/kcm_network_audio.dir/network_audio_model.cpp.o.d -o CMakeFiles/kcm_network_audio.dir/network_audio_model.cpp.o -c /var/home/laptop/projects/plasma-network-audio/src/network_audio_model.cpp
 
 src/CMakeFiles/kcm_network_audio.dir/network_audio_model.cpp.i: cmake_force
@@ -159,7 +131,7 @@ src/CMakeFiles/kcm_network_audio.dir/network_audio_model.cpp.s: cmake_force
 src/CMakeFiles/kcm_network_audio.dir/qrc_kcm_network_audio.cpp.o: src/CMakeFiles/kcm_network_audio.dir/flags.make
 src/CMakeFiles/kcm_network_audio.dir/qrc_kcm_network_audio.cpp.o: src/qrc_kcm_network_audio.cpp
 src/CMakeFiles/kcm_network_audio.dir/qrc_kcm_network_audio.cpp.o: src/CMakeFiles/kcm_network_audio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/var/home/laptop/projects/plasma-network-audio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/kcm_network_audio.dir/qrc_kcm_network_audio.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/var/home/laptop/projects/plasma-network-audio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/kcm_network_audio.dir/qrc_kcm_network_audio.cpp.o"
 	cd /var/home/laptop/projects/plasma-network-audio/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/kcm_network_audio.dir/qrc_kcm_network_audio.cpp.o -MF CMakeFiles/kcm_network_audio.dir/qrc_kcm_network_audio.cpp.o.d -o CMakeFiles/kcm_network_audio.dir/qrc_kcm_network_audio.cpp.o -c /var/home/laptop/projects/plasma-network-audio/build/src/qrc_kcm_network_audio.cpp
 
 src/CMakeFiles/kcm_network_audio.dir/qrc_kcm_network_audio.cpp.i: cmake_force
@@ -174,8 +146,6 @@ src/CMakeFiles/kcm_network_audio.dir/qrc_kcm_network_audio.cpp.s: cmake_force
 kcm_network_audio_OBJECTS = \
 "CMakeFiles/kcm_network_audio.dir/kcm_network_audio_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/kcm_network_audio.dir/network_audio_kcm.cpp.o" \
-"CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.o" \
-"CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.o" \
 "CMakeFiles/kcm_network_audio.dir/network_audio_model.cpp.o" \
 "CMakeFiles/kcm_network_audio.dir/qrc_kcm_network_audio.cpp.o"
 
@@ -184,15 +154,13 @@ kcm_network_audio_EXTERNAL_OBJECTS =
 
 bin/plasma/kcms/systemsettings/kcm_network_audio.so: src/CMakeFiles/kcm_network_audio.dir/kcm_network_audio_autogen/mocs_compilation.cpp.o
 bin/plasma/kcms/systemsettings/kcm_network_audio.so: src/CMakeFiles/kcm_network_audio.dir/network_audio_kcm.cpp.o
-bin/plasma/kcms/systemsettings/kcm_network_audio.so: src/CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.o
-bin/plasma/kcms/systemsettings/kcm_network_audio.so: src/CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.o
 bin/plasma/kcms/systemsettings/kcm_network_audio.so: src/CMakeFiles/kcm_network_audio.dir/network_audio_model.cpp.o
 bin/plasma/kcms/systemsettings/kcm_network_audio.so: src/CMakeFiles/kcm_network_audio.dir/qrc_kcm_network_audio.cpp.o
 bin/plasma/kcms/systemsettings/kcm_network_audio.so: src/CMakeFiles/kcm_network_audio.dir/build.make
 bin/plasma/kcms/systemsettings/kcm_network_audio.so: /usr/lib64/libGLX.so
 bin/plasma/kcms/systemsettings/kcm_network_audio.so: /usr/lib64/libOpenGL.so
 bin/plasma/kcms/systemsettings/kcm_network_audio.so: src/CMakeFiles/kcm_network_audio.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/var/home/laptop/projects/plasma-network-audio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared module ../bin/plasma/kcms/systemsettings/kcm_network_audio.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/var/home/laptop/projects/plasma-network-audio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared module ../bin/plasma/kcms/systemsettings/kcm_network_audio.so"
 	cd /var/home/laptop/projects/plasma-network-audio/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kcm_network_audio.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

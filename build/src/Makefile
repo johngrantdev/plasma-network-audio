@@ -201,6 +201,20 @@ kcm_network_audio-kcm-desktop-gen/fast:
 .PHONY : kcm_network_audio-kcm-desktop-gen/fast
 
 # Convenience name for target.
+src/CMakeFiles/kded_network_audio.dir/rule:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/kded_network_audio.dir/rule
+.PHONY : src/CMakeFiles/kded_network_audio.dir/rule
+
+# Convenience name for target.
+kded_network_audio: src/CMakeFiles/kded_network_audio.dir/rule
+.PHONY : kded_network_audio
+
+# fast build rule for target.
+kded_network_audio/fast:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/build
+.PHONY : kded_network_audio/fast
+
+# Convenience name for target.
 src/CMakeFiles/kcm_network_audio_autogen_timestamp_deps.dir/rule:
 	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/kcm_network_audio_autogen_timestamp_deps.dir/rule
 .PHONY : src/CMakeFiles/kcm_network_audio_autogen_timestamp_deps.dir/rule
@@ -228,12 +242,40 @@ kcm_network_audio_autogen/fast:
 	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kcm_network_audio_autogen.dir/build.make src/CMakeFiles/kcm_network_audio_autogen.dir/build
 .PHONY : kcm_network_audio_autogen/fast
 
+# Convenience name for target.
+src/CMakeFiles/kded_network_audio_autogen_timestamp_deps.dir/rule:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/kded_network_audio_autogen_timestamp_deps.dir/rule
+.PHONY : src/CMakeFiles/kded_network_audio_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+kded_network_audio_autogen_timestamp_deps: src/CMakeFiles/kded_network_audio_autogen_timestamp_deps.dir/rule
+.PHONY : kded_network_audio_autogen_timestamp_deps
+
+# fast build rule for target.
+kded_network_audio_autogen_timestamp_deps/fast:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio_autogen_timestamp_deps.dir/build.make src/CMakeFiles/kded_network_audio_autogen_timestamp_deps.dir/build
+.PHONY : kded_network_audio_autogen_timestamp_deps/fast
+
+# Convenience name for target.
+src/CMakeFiles/kded_network_audio_autogen.dir/rule:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/kded_network_audio_autogen.dir/rule
+.PHONY : src/CMakeFiles/kded_network_audio_autogen.dir/rule
+
+# Convenience name for target.
+kded_network_audio_autogen: src/CMakeFiles/kded_network_audio_autogen.dir/rule
+.PHONY : kded_network_audio_autogen
+
+# fast build rule for target.
+kded_network_audio_autogen/fast:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio_autogen.dir/build.make src/CMakeFiles/kded_network_audio_autogen.dir/build
+.PHONY : kded_network_audio_autogen/fast
+
 avahi_browser.o: avahi_browser.cpp.o
 .PHONY : avahi_browser.o
 
 # target to build an object file
 avahi_browser.cpp.o:
-	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kcm_network_audio.dir/build.make src/CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.o
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/avahi_browser.cpp.o
 .PHONY : avahi_browser.cpp.o
 
 avahi_browser.i: avahi_browser.cpp.i
@@ -241,7 +283,7 @@ avahi_browser.i: avahi_browser.cpp.i
 
 # target to preprocess a source file
 avahi_browser.cpp.i:
-	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kcm_network_audio.dir/build.make src/CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.i
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/avahi_browser.cpp.i
 .PHONY : avahi_browser.cpp.i
 
 avahi_browser.s: avahi_browser.cpp.s
@@ -249,7 +291,7 @@ avahi_browser.s: avahi_browser.cpp.s
 
 # target to generate assembly for a file
 avahi_browser.cpp.s:
-	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kcm_network_audio.dir/build.make src/CMakeFiles/kcm_network_audio.dir/avahi_browser.cpp.s
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/avahi_browser.cpp.s
 .PHONY : avahi_browser.cpp.s
 
 kcm_network_audio_autogen/mocs_compilation.o: kcm_network_audio_autogen/mocs_compilation.cpp.o
@@ -275,6 +317,78 @@ kcm_network_audio_autogen/mocs_compilation.s: kcm_network_audio_autogen/mocs_com
 kcm_network_audio_autogen/mocs_compilation.cpp.s:
 	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kcm_network_audio.dir/build.make src/CMakeFiles/kcm_network_audio.dir/kcm_network_audio_autogen/mocs_compilation.cpp.s
 .PHONY : kcm_network_audio_autogen/mocs_compilation.cpp.s
+
+kded_network_audio_autogen/mocs_compilation.o: kded_network_audio_autogen/mocs_compilation.cpp.o
+.PHONY : kded_network_audio_autogen/mocs_compilation.o
+
+# target to build an object file
+kded_network_audio_autogen/mocs_compilation.cpp.o:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/kded_network_audio_autogen/mocs_compilation.cpp.o
+.PHONY : kded_network_audio_autogen/mocs_compilation.cpp.o
+
+kded_network_audio_autogen/mocs_compilation.i: kded_network_audio_autogen/mocs_compilation.cpp.i
+.PHONY : kded_network_audio_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+kded_network_audio_autogen/mocs_compilation.cpp.i:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/kded_network_audio_autogen/mocs_compilation.cpp.i
+.PHONY : kded_network_audio_autogen/mocs_compilation.cpp.i
+
+kded_network_audio_autogen/mocs_compilation.s: kded_network_audio_autogen/mocs_compilation.cpp.s
+.PHONY : kded_network_audio_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+kded_network_audio_autogen/mocs_compilation.cpp.s:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/kded_network_audio_autogen/mocs_compilation.cpp.s
+.PHONY : kded_network_audio_autogen/mocs_compilation.cpp.s
+
+network_audio_adaptor.o: network_audio_adaptor.cpp.o
+.PHONY : network_audio_adaptor.o
+
+# target to build an object file
+network_audio_adaptor.cpp.o:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/network_audio_adaptor.cpp.o
+.PHONY : network_audio_adaptor.cpp.o
+
+network_audio_adaptor.i: network_audio_adaptor.cpp.i
+.PHONY : network_audio_adaptor.i
+
+# target to preprocess a source file
+network_audio_adaptor.cpp.i:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/network_audio_adaptor.cpp.i
+.PHONY : network_audio_adaptor.cpp.i
+
+network_audio_adaptor.s: network_audio_adaptor.cpp.s
+.PHONY : network_audio_adaptor.s
+
+# target to generate assembly for a file
+network_audio_adaptor.cpp.s:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/network_audio_adaptor.cpp.s
+.PHONY : network_audio_adaptor.cpp.s
+
+network_audio_daemon.o: network_audio_daemon.cpp.o
+.PHONY : network_audio_daemon.o
+
+# target to build an object file
+network_audio_daemon.cpp.o:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/network_audio_daemon.cpp.o
+.PHONY : network_audio_daemon.cpp.o
+
+network_audio_daemon.i: network_audio_daemon.cpp.i
+.PHONY : network_audio_daemon.i
+
+# target to preprocess a source file
+network_audio_daemon.cpp.i:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/network_audio_daemon.cpp.i
+.PHONY : network_audio_daemon.cpp.i
+
+network_audio_daemon.s: network_audio_daemon.cpp.s
+.PHONY : network_audio_daemon.s
+
+# target to generate assembly for a file
+network_audio_daemon.cpp.s:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/network_audio_daemon.cpp.s
+.PHONY : network_audio_daemon.cpp.s
 
 network_audio_kcm.o: network_audio_kcm.cpp.o
 .PHONY : network_audio_kcm.o
@@ -329,7 +443,7 @@ pipewire_controller.o: pipewire_controller.cpp.o
 
 # target to build an object file
 pipewire_controller.cpp.o:
-	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kcm_network_audio.dir/build.make src/CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.o
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/pipewire_controller.cpp.o
 .PHONY : pipewire_controller.cpp.o
 
 pipewire_controller.i: pipewire_controller.cpp.i
@@ -337,7 +451,7 @@ pipewire_controller.i: pipewire_controller.cpp.i
 
 # target to preprocess a source file
 pipewire_controller.cpp.i:
-	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kcm_network_audio.dir/build.make src/CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.i
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/pipewire_controller.cpp.i
 .PHONY : pipewire_controller.cpp.i
 
 pipewire_controller.s: pipewire_controller.cpp.s
@@ -345,8 +459,32 @@ pipewire_controller.s: pipewire_controller.cpp.s
 
 # target to generate assembly for a file
 pipewire_controller.cpp.s:
-	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kcm_network_audio.dir/build.make src/CMakeFiles/kcm_network_audio.dir/pipewire_controller.cpp.s
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/pipewire_controller.cpp.s
 .PHONY : pipewire_controller.cpp.s
+
+preference_store.o: preference_store.cpp.o
+.PHONY : preference_store.o
+
+# target to build an object file
+preference_store.cpp.o:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/preference_store.cpp.o
+.PHONY : preference_store.cpp.o
+
+preference_store.i: preference_store.cpp.i
+.PHONY : preference_store.i
+
+# target to preprocess a source file
+preference_store.cpp.i:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/preference_store.cpp.i
+.PHONY : preference_store.cpp.i
+
+preference_store.s: preference_store.cpp.s
+.PHONY : preference_store.s
+
+# target to generate assembly for a file
+preference_store.cpp.s:
+	cd /var/home/laptop/projects/plasma-network-audio/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kded_network_audio.dir/build.make src/CMakeFiles/kded_network_audio.dir/preference_store.cpp.s
+.PHONY : preference_store.cpp.s
 
 qrc_kcm_network_audio.o: qrc_kcm_network_audio.cpp.o
 .PHONY : qrc_kcm_network_audio.o
@@ -388,13 +526,25 @@ help:
 	@echo "... kcm_network_audio-kcm-desktop-gen"
 	@echo "... kcm_network_audio_autogen"
 	@echo "... kcm_network_audio_autogen_timestamp_deps"
+	@echo "... kded_network_audio_autogen"
+	@echo "... kded_network_audio_autogen_timestamp_deps"
 	@echo "... kcm_network_audio"
+	@echo "... kded_network_audio"
 	@echo "... avahi_browser.o"
 	@echo "... avahi_browser.i"
 	@echo "... avahi_browser.s"
 	@echo "... kcm_network_audio_autogen/mocs_compilation.o"
 	@echo "... kcm_network_audio_autogen/mocs_compilation.i"
 	@echo "... kcm_network_audio_autogen/mocs_compilation.s"
+	@echo "... kded_network_audio_autogen/mocs_compilation.o"
+	@echo "... kded_network_audio_autogen/mocs_compilation.i"
+	@echo "... kded_network_audio_autogen/mocs_compilation.s"
+	@echo "... network_audio_adaptor.o"
+	@echo "... network_audio_adaptor.i"
+	@echo "... network_audio_adaptor.s"
+	@echo "... network_audio_daemon.o"
+	@echo "... network_audio_daemon.i"
+	@echo "... network_audio_daemon.s"
 	@echo "... network_audio_kcm.o"
 	@echo "... network_audio_kcm.i"
 	@echo "... network_audio_kcm.s"
@@ -404,6 +554,9 @@ help:
 	@echo "... pipewire_controller.o"
 	@echo "... pipewire_controller.i"
 	@echo "... pipewire_controller.s"
+	@echo "... preference_store.o"
+	@echo "... preference_store.i"
+	@echo "... preference_store.s"
 	@echo "... qrc_kcm_network_audio.o"
 	@echo "... qrc_kcm_network_audio.i"
 	@echo "... qrc_kcm_network_audio.s"
