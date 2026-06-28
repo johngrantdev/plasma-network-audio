@@ -1,5 +1,7 @@
 # Plasma Network Audio
 
+> Disclaimer: This project was vibe coded to fix an issue I was having with how random network audio devices were automatically added as audio outputs in KDE Plasma/Pipewire. It works well for my use case but has had limited testing. So read the source code and use at your own risk.
+
 This is a KDE Plasma system settings module for managing AirPlay/RAOP network audio devices. Currently KDE Plasma uses `libpipewire-module-raop-discover` to automatically discover and add audio sinks for all network audio devices on the network. This functionality can cause audio to output from devices that the user never explicitly connected to. This solution instead provides a Bluetooth-style UX to discover devices on the network and connect to them manually, with options for auto-connect and per-device preferences.
 
 ## Screenshot
