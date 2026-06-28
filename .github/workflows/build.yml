@@ -27,6 +27,7 @@ jobs:
             ninja-build \
             qt6-qtbase-devel \
             qt6-qtdeclarative-devel \
+            qt6-qttools-devel \
             kf6-kcoreaddons-devel \
             kf6-ki18n-devel \
             kf6-kcmutils-devel \
