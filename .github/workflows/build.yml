@@ -10,6 +10,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     container:
       image: fedora:latest
 
@@ -81,16 +83,21 @@ jobs:
             --define "staging ${PWD}/staging" \
             plasma-network-audio.spec
 
+      - name: Collect RPMs
+        run: |
+          mkdir -p dist
+          find ~/rpmbuild/RPMS -name '*.rpm' -exec cp {} dist/ \;
+
       - name: Upload RPM artifact
         uses: actions/upload-artifact@v4
         with:
           name: plasma-network-audio-${{ steps.version.outputs.version }}-${{ steps.version.outputs.release }}
-          path: ~/rpmbuild/RPMS/**/*.rpm
+          path: dist/*.rpm
           if-no-files-found: error
 
       - name: Create GitHub Release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
-          files: ~/rpmbuild/RPMS/**/*.rpm
+          files: dist/*.rpm
           generate_release_notes: true
