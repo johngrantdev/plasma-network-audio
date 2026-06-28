@@ -32,8 +32,8 @@ page and desktop notifications with Connect/Ignore actions.
 cp -a %{staging}/* %{buildroot}/
 
 %files
-%{_libdir}/plugins/kf6/kded/kded_network_audio.so
-%{_libdir}/plugins/plasma/kcms/systemsettings/kcm_network_audio.so
+%{_libdir}/qt6/plugins/kf6/kded/kded_network_audio.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_network_audio.so
 %{_datadir}/applications/kcm_network_audio.desktop
 %{_datadir}/knotifications6/kded_network_audio.notifyrc
 
