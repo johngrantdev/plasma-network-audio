@@ -1,0 +1,89 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: fedora:latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install build dependencies
+        run: |
+          dnf install -y \
+            cmake \
+            extra-cmake-modules \
+            gcc-c++ \
+            ninja-build \
+            qt6-qtbase-devel \
+            qt6-qtdeclarative-devel \
+            kf6-kcoreaddons-devel \
+            kf6-ki18n-devel \
+            kf6-kcmutils-devel \
+            kf6-kdbusaddons-devel \
+            kf6-knotifications-devel \
+            kf6-kconfig-devel \
+            rpm-build \
+            rpmdevtools
+
+      - name: Determine version
+        id: version
+        run: |
+          if [[ "${GITHUB_REF}" == refs/tags/v* ]]; then
+            # e.g. tag v0.1-alpha.1 → version 0.1, release 0.alpha.1
+            TAG="${GITHUB_REF#refs/tags/v}"
+            VERSION="${TAG%%-*}"
+            PRERELEASE="${TAG#*-}"
+            RELEASE="0.${PRERELEASE//\./_}"
+          else
+            VERSION="0.1"
+            RELEASE="0.alpha1.$(date +%Y%m%d).${GITHUB_SHA::7}"
+          fi
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "release=${RELEASE}" >> "$GITHUB_OUTPUT"
+          echo "Building ${VERSION}-${RELEASE}"
+
+      - name: Configure
+        run: |
+          cmake -B build -G Ninja \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_INSTALL_PREFIX=/usr \
+            -DPROJECT_VERSION=${{ steps.version.outputs.version }}
+
+      - name: Build
+        run: cmake --build build
+
+      - name: Install to staging
+        run: |
+          DESTDIR="${PWD}/staging" cmake --install build
+
+      - name: Build RPM
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+          RELEASE: ${{ steps.version.outputs.release }}
+        run: |
+          rpmdev-setuptree
+          # Create source tarball from staging
+          tar -czf ~/rpmbuild/SOURCES/plasma-network-audio-${VERSION}.tar.gz \
+            -C staging .
+          # Build RPM from spec
+          rpmbuild -bb \
+            --define "version ${VERSION}" \
+            --define "release ${RELEASE}" \
+            --define "staging ${PWD}/staging" \
+            plasma-network-audio.spec
+
+      - name: Upload RPM
+        uses: actions/upload-artifact@v4
+        with:
+          name: plasma-network-audio-${{ steps.version.outputs.version }}-${{ steps.version.outputs.release }}
+          path: ~/rpmbuild/RPMS/**/*.rpm
+          if-no-files-found: error
