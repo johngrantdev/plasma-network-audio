@@ -37,6 +37,8 @@ Before using this application, disable raop-discover by removing:
 
 On Fedora/Aurora this file is provided by the `pipewire` package. Removing it requires either a custom OS image or a local override.
 
+**Note:** The commonly suggested alternative of setting `context.properties = { module.raop = false }` in a pipewire drop-in config will not work here. That property disables all RAOP modules including `libpipewire-module-raop-sink`, which this application depends on to create audio sinks when connecting to devices.
+
 ## Building
 
 ```bash
