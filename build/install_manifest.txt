@@ -1,0 +1,2 @@
+/usr/lib64/plugins/plasma/kcms/systemsettings/kcm_network_audio.so
+/usr/share/applications/kcm_network_audio.desktop

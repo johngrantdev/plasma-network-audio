@@ -1,0 +1,14 @@
+{
+    "KPlugin": {
+        "Authors": [{"Email": "jlgrant85@gmail.com", "Name": "John Grant"}],
+        "BugReportUrl": "https://github.com/johngrantdev/plasma-network-audio/issues",
+        "Category": "Hardware",
+        "Description": "Discover and connect network audio output devices",
+        "Icon": "audio-speakers",
+        "Id": "kcm_network_audio",
+        "License": "GPL-2.0-or-later",
+        "Name": "Network Audio",
+        "Version": "0.1"
+    },
+    "X-KDE-System-Settings-Parent-Category": "hardware"
+}
