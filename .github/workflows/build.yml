@@ -55,13 +55,13 @@ jobs:
 
       - name: Configure
         run: |
-          cmake -B build -G Ninja \
+          cmake -B build \
             -DCMAKE_BUILD_TYPE=Release \
             -DCMAKE_INSTALL_PREFIX=/usr \
             -DPROJECT_VERSION=${{ steps.version.outputs.version }}
 
       - name: Build
-        run: cmake --build build
+        run: cmake --build build -- -j$(nproc)
 
       - name: Install to staging
         run: |
